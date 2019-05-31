@@ -8,7 +8,7 @@ xml_2_txt.py converts the xml to reqiured label format i.e. for each image we ne
 
 **1.** class_num
 
-**2.** x co-ordinate of centre of the object with respect to entire image i.e.i.e.(xmin+(xmax-xmin))/image_width
+**2.** x co-ordinate of centre of the object with respect to entire image i.e.(xmin+(xmax-xmin))/image_width
 
 **3.** y co-ordinate of centre of the object with respect to entire image i.e.(ymin+(ymax-ymin))/image_height
 

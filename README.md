@@ -6,12 +6,12 @@ Trained yolo on custom for head detection.Concepts behind the yolo is mentioned 
 
 xml_2_txt.py converts the xml to reqiured label format i.e. for each image we need sepearate text file containg the details of each head on new line.The details contain the following information:
 
-**-**class_num
+**1.** class_num
 
-*x co-ordinate of centre of the object with respect to entire image i.e.i.e.(xmin+(xmax-xmin))/image_width
+**2.** x co-ordinate of centre of the object with respect to entire image i.e.i.e.(xmin+(xmax-xmin))/image_width
 
-*y co-ordinate of centre of the object with respect to entire image i.e.(ymin+(ymax-ymin))/image_height
+**3.** y co-ordinate of centre of the object with respect to entire image i.e.(ymin+(ymax-ymin))/image_height
 
-*absolute width of the object i.e. absolute_width=(xmax-xmin)/image_height
+**4.** absolute width of the object i.e. absolute_width=(xmax-xmin)/image_height
 
-*absolute height of the object i.e. absolute_height=(ymax-ymin)/image_height
+**5.** absolute height of the object i.e. absolute_height=(ymax-ymin)/image_height

@@ -1,0 +1,16 @@
+1.set custom  anchor box using kmeans
+2.set layers and stride for initial layers : 
+	line 717 stride=2 to 4
+	line 720 layers = -1, 36 to -1, 11
+3.width and height : set network resolution to be 512*512, should be divisible by 32 and larger resolution helps better detection of small objects 
+4.change jitter from 0.3 to 0 - it randomly crops and resizes images with changing aspect ratio from x
+5.set resize from 1 to 0 :  In case of 1 image size of each iteration will be randomly from 320 to 512. If it is 0, the size of each training is the same as the input size
+
+learning rate, policy 
+learning_rate=0.001
+burn_in=1000
+policy=steps : policy for changing learning rate: constant (by default), sgdr, steps, step, sig, exp, poly, random (f.e., if policy=random - then current learning rate will be changed in this way = learning_rate * pow(rand_uniform(0,1), power)),
+steps: 80% of max_batches, 90%of max batches
+scale = 0.1, 0.1 : the learning rate will be reduced ten times on the basis of the previous learning rate each time it reaches the steps
+
+ignore_thresh = .7 The parameter that decides whether to calculate the IOU error. If it is greater than thresh, the IOU error will not be caught in the cost function 
